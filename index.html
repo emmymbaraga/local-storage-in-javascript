@@ -4,16 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Local Storage</title>
-    <style media="screen">
-        input,button{
-            padding: 7px;
-            height: 40px;
-        }
-        fieldset{
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <body>
 
@@ -28,31 +20,8 @@
         <legend>Local storage output</legend>
         <div id="IsOutput"></div>
     </fieldset>
-    <script>
-    const inpKey = document.getElementById("inpKey");
-    const inpValue = document.getElementById("inpValue");
-    const btnInsert = document.getElementById("btnInsert");
-    const IsOutput = document.getElementById("IsOutput");
     
-    btnInsert.onclick = function(){
-        const key = inpKey.value;
-        const value = inpValue.value;
-        // console.log(key)
-        // console.log(value)
-
-        if(key&&value){
-            localStorage.setItem(key,value);
-            location.reload();
-        }
-    };
-
-    for(let i=0;i<localStorage.length;i++){
-        const key = localStorage.key(i);
-        const value=localStorage.getItem(key);
-
-        IsOutput.innerHTML += `${key}: ${value} <br/>`;
-    }
    
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
